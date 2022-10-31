@@ -296,6 +296,8 @@ struct List_1_t10BA05B555C92BD54800DFF82DCAAFC9DE44A077;
 struct List_1_tB9CD639EB4FE5EA0A8B417168BB9BD2D29AEE271;
 // System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycast>
 struct List_1_tE7BEADF38CADBCC46B040CF07A1B719A7F7E5123;
+// System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>
+struct List_1_t0754071572EFE7A5C92A59495D2524FC935364E3;
 // System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>
 struct List_1_t2FD8903BBE837973AFCE154B4045672F6F238D2A;
 // System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTextureInfo>
@@ -13951,6 +13953,23 @@ struct ARMeshManager_t3CF6F2E0FA722FCAE76A97C29A3C438E0D191740_StaticFields
 	List_1_tEE09D0BD215A518344AF2985829C519B609B7B17* ___s_MeshInfos_22;
 };
 
+// ARPlaneIndication
+struct ARPlaneIndication_t70724B55767820B6C751A9FB95E1FE7817800CEE  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.XR.ARFoundation.ARRaycastManager ARPlaneIndication::arRaycastManager
+	ARRaycastManager_tD9459374F0F5BD9E2E4A8A1C665E7F33F9C2EE44* ___arRaycastManager_4;
+	// UnityEngine.Camera ARPlaneIndication::ARCam
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___ARCam_6;
+	// UnityEngine.GameObject ARPlaneIndication::ARIndicator
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARIndicator_7;
+};
+
+struct ARPlaneIndication_t70724B55767820B6C751A9FB95E1FE7817800CEE_StaticFields
+{
+	// System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit> ARPlaneIndication::hits
+	List_1_t0754071572EFE7A5C92A59495D2524FC935364E3* ___hits_5;
+};
+
 // UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer
 struct ARPlaneMeshVisualizer_t21838C8E2676AC524939E67CB965925E924E018F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -18065,15 +18084,18 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4154[7] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4159[3] = 
 {
 	static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_nTag_0)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_aValue_1)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___elist_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4164[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4164[4] = 
 {
-	static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___IsTextualNodeBitmap_0)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___CanReadContentAsBitmap_1)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___HasValueBitmap_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4167[11] = 
+	static_cast<int32_t>(offsetof(ARPlaneIndication_t70724B55767820B6C751A9FB95E1FE7817800CEE, ___arRaycastManager_4)),static_cast<int32_t>(offsetof(ARPlaneIndication_t70724B55767820B6C751A9FB95E1FE7817800CEE_StaticFields, ___hits_5)),static_cast<int32_t>(offsetof(ARPlaneIndication_t70724B55767820B6C751A9FB95E1FE7817800CEE, ___ARCam_6)),static_cast<int32_t>(offsetof(ARPlaneIndication_t70724B55767820B6C751A9FB95E1FE7817800CEE, ___ARIndicator_7)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4165[11] = 
 {
 	static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057_StaticFields, ___Instance_4)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___raycastManager_5)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___placementPose_6)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___placementPoseisValid_7)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___isObjectPlaced_8)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___positionIndicator_9)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___prefabToPlace_10)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___ARCamera_11)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___txt_12)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___PlacedObj_13)),static_cast<int32_t>(offsetof(ObjectPlacement_t5A26C0CE7778C6C3F0DD9BC07EA4A6D4BC11D057, ___qrcode_14)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4168[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4166[2] = 
 {
 	static_cast<int32_t>(offsetof(ReadQRCode_t4544083189C582CBE8568DF87F763D170C736B8E, ___CameraManager_4)),static_cast<int32_t>(offsetof(ReadQRCode_t4544083189C582CBE8568DF87F763D170C736B8E, ___txt_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4172[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4168[3] = 
+{
+	static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___IsTextualNodeBitmap_0)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___CanReadContentAsBitmap_1)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___HasValueBitmap_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4173[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};

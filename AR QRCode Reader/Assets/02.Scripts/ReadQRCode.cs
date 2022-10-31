@@ -7,7 +7,20 @@ using UnityEngine.UI;
 public class ReadQRCode : MonoBehaviour
 {
     public ARCameraManager CameraManager;
+    public Image[] images;
     public Text txt;
+    public Button button;
+
+    private void Awake()
+    {
+        button.onClick.AddListener(() =>
+        {
+            for (int i = 0; i < images.Length; i++) images[i].enabled = false;
+            txt.text = "QR코드를 인식해주세요.";
+            button.GetComponent<Image>().enabled = false;
+            button.interactable = false;
+        });
+    }
 
     void Update()
     {
@@ -33,18 +46,170 @@ public class ReadQRCode : MonoBehaviour
                 if (result != null)
                 {
                     txt.text = result.Text;
-                    SetObject(); //함수 호출 추가
+                    Images(result.Text);
                 }
             }
         }
     }
 
-    /// <summary>
-    /// 오브젝트 생성 함수 
-    /// </summary>
-    void SetObject()
+    void Hide()
     {
-        GetComponent<ObjectPlacement>().enabled = true;
-        ObjectPlacement.Instance.qrcode = "Object";
+        txt.text = "";
+        button.GetComponent<Image>().enabled = true;
+        button.interactable = true;
+    }
+
+    void Images(string result)
+    {
+        // AR1
+        if (result == "http://m.site.naver.com/12K6t")
+        {
+            Hide();
+            images[0].enabled = true;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR2
+        if (result == "http://m.site.naver.com/12KfS")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = true;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR3
+        if (result == "http://m.site.naver.com/12Kg5")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = true;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR4
+        if (result == "http://m.site.naver.com/12Khb")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = true;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR5
+        if (result == "http://m.site.naver.com/12Khm")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = true;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR6
+        if (result == "http://m.site.naver.com/12Khu")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = true;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR7
+        if (result == "http://m.site.naver.com/12Khz")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = true;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR8
+        if (result == "http://m.site.naver.com/12KhF")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = true;
+            images[8].enabled = false;
+            images[9].enabled = false;
+        }
+        // AR9
+        if (result == "http://m.site.naver.com/12KhL")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = true;
+            images[9].enabled = false;
+        }
+        // AR10
+        if (result == "http://m.site.naver.com/12KhR")
+        {
+            Hide();
+            images[0].enabled = false;
+            images[1].enabled = false;
+            images[2].enabled = false;
+            images[3].enabled = false;
+            images[4].enabled = false;
+            images[5].enabled = false;
+            images[6].enabled = false;
+            images[7].enabled = false;
+            images[8].enabled = false;
+            images[9].enabled = true;
+        }
     }
 }
